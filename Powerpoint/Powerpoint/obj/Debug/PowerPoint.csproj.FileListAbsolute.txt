@@ -1,0 +1,42 @@
+C:\Users\vijay\AppData\Local\Temporary Projects\PowerPoint\bin\Debug\PowerPoint.exe.config
+C:\Users\vijay\AppData\Local\Temporary Projects\PowerPoint\bin\Debug\PowerPoint.exe
+C:\Users\vijay\AppData\Local\Temporary Projects\PowerPoint\bin\Debug\PowerPoint.pdb
+C:\Users\vijay\AppData\Local\Temporary Projects\PowerPoint\obj\Debug\PowerPoint.csprojResolveAssemblyReference.cache
+C:\Users\vijay\AppData\Local\Temporary Projects\PowerPoint\obj\Debug\PowerPoint.csproj.ResolveComReference.cache
+C:\Users\vijay\AppData\Local\Temporary Projects\PowerPoint\obj\Debug\MainWindow.baml
+C:\Users\vijay\AppData\Local\Temporary Projects\PowerPoint\obj\Debug\MainWindow.g.cs
+C:\Users\vijay\AppData\Local\Temporary Projects\PowerPoint\obj\Debug\App.g.cs
+C:\Users\vijay\AppData\Local\Temporary Projects\PowerPoint\obj\Debug\PowerPoint_MarkupCompile.cache
+C:\Users\vijay\AppData\Local\Temporary Projects\PowerPoint\obj\Debug\PowerPoint.g.resources
+C:\Users\vijay\AppData\Local\Temporary Projects\PowerPoint\obj\Debug\PowerPoint.Properties.Resources.resources
+C:\Users\vijay\AppData\Local\Temporary Projects\PowerPoint\obj\Debug\PowerPoint.csproj.GenerateResource.Cache
+C:\Users\vijay\AppData\Local\Temporary Projects\PowerPoint\obj\Debug\PowerPoint.exe
+C:\Users\vijay\AppData\Local\Temporary Projects\PowerPoint\obj\Debug\PowerPoint.pdb
+C:\Users\vijay\Documents\Visual Studio 2012\Projects\KinectPrograms\Powerpoint\Powerpoint\bin\Debug\Powerpoint.exe.config
+C:\Users\vijay\Documents\Visual Studio 2012\Projects\KinectPrograms\Powerpoint\Powerpoint\obj\Debug\Powerpoint.csproj.ResolveComReference.cache
+C:\Users\vijay\Documents\Visual Studio 2012\Projects\KinectPrograms\Powerpoint\Powerpoint\obj\Debug\Powerpoint.exe
+C:\Users\vijay\Documents\Visual Studio 2012\Projects\KinectPrograms\Powerpoint\Powerpoint\obj\Debug\Powerpoint.pdb
+C:\Users\vijay\Documents\Visual Studio 2012\Projects\KinectPrograms\Powerpoint\Powerpoint\bin\Debug\Powerpoint.exe
+C:\Users\vijay\Documents\Visual Studio 2012\Projects\KinectPrograms\Powerpoint\Powerpoint\bin\Debug\Powerpoint.pdb
+C:\Users\vijay\Documents\Visual Studio 2012\Projects\KinectPrograms\Powerpoint\Powerpoint\obj\Debug\Powerpoint.csprojResolveAssemblyReference.cache
+C:\Users\vijay\Documents\Visual Studio 2012\Projects\KinectPrograms\Powerpoint\Powerpoint\obj\Debug\MainWindow.baml
+C:\Users\vijay\Documents\Visual Studio 2012\Projects\KinectPrograms\Powerpoint\Powerpoint\obj\Debug\MainWindow.g.cs
+C:\Users\vijay\Documents\Visual Studio 2012\Projects\KinectPrograms\Powerpoint\Powerpoint\obj\Debug\App.g.cs
+C:\Users\vijay\Documents\Visual Studio 2012\Projects\KinectPrograms\Powerpoint\Powerpoint\obj\Debug\Powerpoint_MarkupCompile.cache
+C:\Users\vijay\Documents\Visual Studio 2012\Projects\KinectPrograms\Powerpoint\Powerpoint\obj\Debug\Powerpoint.g.resources
+C:\Users\vijay\Documents\Visual Studio 2012\Projects\KinectPrograms\Powerpoint\Powerpoint\obj\Debug\PowerPoint.Properties.Resources.resources
+C:\Users\vijay\Documents\Visual Studio 2012\Projects\KinectPrograms\Powerpoint\Powerpoint\obj\Debug\Powerpoint.csproj.GenerateResource.Cache
+C:\Users\uacs\Documents\Visual Studio 2015\KinectPrograms\Powerpoint\Powerpoint\bin\Debug\Powerpoint.exe.config
+C:\Users\uacs\Documents\Visual Studio 2015\KinectPrograms\Powerpoint\Powerpoint\obj\Debug\Powerpoint.csproj.ResolveComReference.cache
+C:\Users\uacs\Documents\Visual Studio 2015\KinectPrograms\Powerpoint\Powerpoint\obj\Debug\Powerpoint.exe
+C:\Users\uacs\Documents\Visual Studio 2015\KinectPrograms\Powerpoint\Powerpoint\obj\Debug\Powerpoint.pdb
+C:\Users\uacs\Documents\Visual Studio 2015\KinectPrograms\Powerpoint\Powerpoint\bin\Debug\Powerpoint.exe
+C:\Users\uacs\Documents\Visual Studio 2015\KinectPrograms\Powerpoint\Powerpoint\bin\Debug\Powerpoint.pdb
+C:\Users\uacs\Documents\Visual Studio 2015\KinectPrograms\Powerpoint\Powerpoint\obj\Debug\Powerpoint.csprojResolveAssemblyReference.cache
+C:\Users\uacs\Documents\Visual Studio 2015\KinectPrograms\Powerpoint\Powerpoint\obj\Debug\MainWindow.baml
+C:\Users\uacs\Documents\Visual Studio 2015\KinectPrograms\Powerpoint\Powerpoint\obj\Debug\MainWindow.g.cs
+C:\Users\uacs\Documents\Visual Studio 2015\KinectPrograms\Powerpoint\Powerpoint\obj\Debug\App.g.cs
+C:\Users\uacs\Documents\Visual Studio 2015\KinectPrograms\Powerpoint\Powerpoint\obj\Debug\Powerpoint_MarkupCompile.cache
+C:\Users\uacs\Documents\Visual Studio 2015\KinectPrograms\Powerpoint\Powerpoint\obj\Debug\Powerpoint.g.resources
+C:\Users\uacs\Documents\Visual Studio 2015\KinectPrograms\Powerpoint\Powerpoint\obj\Debug\PowerPoint.Properties.Resources.resources
+C:\Users\uacs\Documents\Visual Studio 2015\KinectPrograms\Powerpoint\Powerpoint\obj\Debug\Powerpoint.csproj.GenerateResource.Cache
