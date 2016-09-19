@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Diagnostics;
@@ -12,8 +12,7 @@ using System.Threading;
 using Graph = Microsoft.Office.Interop.Graph;
 using PowerPoint1 = Microsoft.Office.Interop.PowerPoint;
 using Microsoft.Office.Core;
-
-
+using System.Timers;
 
 namespace KinectSetup2
 {
@@ -225,7 +224,7 @@ namespace KinectSetup2
 
             // initialize the components (controls) of the window
             this.InitializeComponent();
-            ShowPresentation();
+           ShowPresentation();
 
         }
 
@@ -367,9 +366,9 @@ namespace KinectSetup2
                             }
 
                             this.DrawBody(joints, jointPoints, dc, drawPen);
-
-                            this.DrawHand(body.HandLeftState, jointPoints[JointType.HandLeft], dc);
-                            this.DrawHand(body.HandRightState, jointPoints[JointType.HandRight], dc);
+                            int hand; // hand 0 = left , 1 = right
+                            this.DrawHand(body.HandLeftState, jointPoints[JointType.HandLeft], dc,0) ;
+                            this.DrawHand(body.HandRightState, jointPoints[JointType.HandRight], dc,1);
                           //  PlayBeep();
                         }
                        
@@ -461,25 +460,48 @@ namespace KinectSetup2
 
             drawingContext.DrawLine(drawPen, jointPoints[jointType0], jointPoints[jointType1]);
         }
-
+        Boolean hand_open_left = false, hand_open_right = false;
         /// <summary>
         /// Draws a hand symbol if the hand is tracked: red circle = closed, green circle = opened; blue circle = lasso
         /// </summary>
         /// <param name="handState">state of the hand</param>
         /// <param name="handPosition">position of the hand</param>
         /// <param name="drawingContext">drawing context to draw to</param>
-        private void DrawHand(HandState handState, Point handPosition, DrawingContext drawingContext)
+        private void DrawHand(HandState handState, Point handPosition, DrawingContext drawingContext , int hand)
         {
             switch (handState)
             {
                 case HandState.Closed:
                     drawingContext.DrawEllipse(this.handClosedBrush, null, handPosition, HandSize, HandSize);
+                   
+                       
+                        if (hand == 0 && hand_open_left)
+                        {
+                        hand_open_left = false;
+                            Button_prev();
+                        }
+                        else if (hand == 1 && hand_open_right)
+                        {
+                        hand_open_right = false;
+                            Button_Next();
+                        }
+                    
+                    //Button_Next();
+                    //    PlayBeep();
+                    break;
+                case HandState.Open:
+                    if(hand == 0)
+                    {
+                        hand_open_left = true;
+                    }else if(hand == 1)
+                    {
+                        hand_open_right = true;
+                    }
+                   drawingContext.DrawEllipse(this.handOpenBrush, null, handPosition, HandSize, HandSize);
+                    
                     break;
 
-                case HandState.Open:
-                    drawingContext.DrawEllipse(this.handOpenBrush, null, handPosition, HandSize, HandSize);
-                    PlayBeep();
-                    break;
+               
 
                 case HandState.Lasso:
                     drawingContext.DrawEllipse(this.handLassoBrush, null, handPosition, HandSize, HandSize);
@@ -545,7 +567,7 @@ namespace KinectSetup2
         {
             String strTemplate, strPic;
             strTemplate =
-              "C:\\Program Files (x86)\\Microsoft Office\\root\\Templates\\1033\\WidescreenPresentation.potx";
+              "C:\\Program Files (x86)\\Microsoft Office\\Templates\\1033\\WidescreenPresentation.potx";
             strPic = "C:\\Windows\\minterm.png";
             bool bAssistantOn;
 
@@ -568,8 +590,8 @@ namespace KinectSetup2
             objTextRng.Text = "My Sample Presentation";
             objTextRng.Font.Name = "Comic Sans MS";
             objTextRng.Font.Size = 48;
-            objSlide.Shapes.AddPicture(strPic, MsoTriState.msoFalse, MsoTriState.msoTrue,
-                150, 150, 500, 350);
+           // objSlide.Shapes.AddPicture(strPic, MsoTriState.msoFalse, MsoTriState.msoTrue,
+             //   150, 150, 500, 350);
 
             //Build Slide #2:
             //Add text to the slide title, format the text. Also add a chart to the
@@ -631,8 +653,53 @@ namespace KinectSetup2
             //objPres.Close();
             // objApp.Quit();
         }
+        Boolean next = false , prev = false;
+        private void Button_Next()
+        {
+            if (objSSWs != null && objSSWs.Count >= 1 && objPres.SlideShowWindow.View != null)
+            {
+                objPres.SlideShowWindow.View.Next();
+                next = false;
+            }
+            //if (!next)
+            //{
+              //  next = true;
+                //System.Timers.Timer myTimer = new System.Timers.Timer();
+                //myTimer.Elapsed += new ElapsedEventHandler(DisplayTimeEvent);
+                //myTimer.Interval = 5000;
+                //myTimer.Start();
+            //}
+              
+        }
+        private void Button_prev()
+        {
+            //if (!prev)
+            //{
+            //  prev = true;
+            // System.Timers.Timer myTimer = new System.Timers.Timer();
+            //myTimer.Elapsed += new ElapsedEventHandler(DisplayTimeEventPrev);
+            //myTimer.Interval = 5000;
+            //myTimer.Start();
+            //}
+            if (objSSWs != null && objSSWs.Count >= 1 && objPres.SlideShowWindow.View != null)
+            {
+                prev = false;
+                objPres.SlideShowWindow.View.Previous();
+            }
+        }
+        private void DisplayTimeEventPrev(Object source, System.Timers.ElapsedEventArgs e)
+        {
 
+            
+        }
+
+        private void DisplayTimeEvent(Object source, System.Timers.ElapsedEventArgs e)
+        {
+
+            
+        }
     }
+
 
       
 }
