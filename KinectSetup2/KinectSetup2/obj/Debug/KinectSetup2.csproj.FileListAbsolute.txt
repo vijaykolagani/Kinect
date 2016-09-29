@@ -35,3 +35,20 @@ C:\Users\uacs\Documents\Visual Studio 2015\KinectPrograms\KinectSetup2\KinectSet
 C:\Users\uacs\Documents\Visual Studio 2015\KinectPrograms\KinectSetup2\KinectSetup2\obj\Debug\KinectSetup2.g.resources
 C:\Users\uacs\Documents\Visual Studio 2015\KinectPrograms\KinectSetup2\KinectSetup2\obj\Debug\KinectSetup2.Properties.Resources.resources
 C:\Users\uacs\Documents\Visual Studio 2015\KinectPrograms\KinectSetup2\KinectSetup2\obj\Debug\KinectSetup2.csproj.GenerateResource.Cache
+C:\Users\uacs\Documents\GitHub\Kinect\KinectSetup2\KinectSetup2\bin\Debug\KinectSetup2.exe.config
+C:\Users\uacs\Documents\GitHub\Kinect\KinectSetup2\KinectSetup2\obj\Debug\KinectSetup2.csproj.ResolveComReference.cache
+C:\Users\uacs\Documents\GitHub\Kinect\KinectSetup2\KinectSetup2\obj\Debug\KinectSetup2.exe
+C:\Users\uacs\Documents\GitHub\Kinect\KinectSetup2\KinectSetup2\obj\Debug\KinectSetup2.pdb
+C:\Users\uacs\Documents\GitHub\Kinect\KinectSetup2\KinectSetup2\bin\Debug\KinectSetup2.exe
+C:\Users\uacs\Documents\GitHub\Kinect\KinectSetup2\KinectSetup2\bin\Debug\KinectSetup2.pdb
+C:\Users\uacs\Documents\GitHub\Kinect\KinectSetup2\KinectSetup2\bin\Debug\Microsoft.Kinect.dll
+C:\Users\uacs\Documents\GitHub\Kinect\KinectSetup2\KinectSetup2\bin\Debug\Microsoft.Expression.Drawing.dll
+C:\Users\uacs\Documents\GitHub\Kinect\KinectSetup2\KinectSetup2\bin\Debug\Microsoft.Kinect.xml
+C:\Users\uacs\Documents\GitHub\Kinect\KinectSetup2\KinectSetup2\obj\Debug\KinectSetup2.csprojResolveAssemblyReference.cache
+C:\Users\uacs\Documents\GitHub\Kinect\KinectSetup2\KinectSetup2\obj\Debug\MainWindow.baml
+C:\Users\uacs\Documents\GitHub\Kinect\KinectSetup2\KinectSetup2\obj\Debug\MainWindow.g.cs
+C:\Users\uacs\Documents\GitHub\Kinect\KinectSetup2\KinectSetup2\obj\Debug\App.g.cs
+C:\Users\uacs\Documents\GitHub\Kinect\KinectSetup2\KinectSetup2\obj\Debug\KinectSetup2_MarkupCompile.cache
+C:\Users\uacs\Documents\GitHub\Kinect\KinectSetup2\KinectSetup2\obj\Debug\KinectSetup2.g.resources
+C:\Users\uacs\Documents\GitHub\Kinect\KinectSetup2\KinectSetup2\obj\Debug\KinectSetup2.Properties.Resources.resources
+C:\Users\uacs\Documents\GitHub\Kinect\KinectSetup2\KinectSetup2\obj\Debug\KinectSetup2.csproj.GenerateResource.Cache

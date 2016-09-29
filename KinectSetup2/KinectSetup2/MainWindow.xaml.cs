@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Diagnostics;
@@ -140,7 +140,7 @@ namespace KinectSetup2
 
         public MainWindow()
         {
-           
+
             // Only one Kinect Sensor is supported
             _sensor = KinectSensor.GetDefault();
             // get the coordinate mapper
@@ -224,7 +224,7 @@ namespace KinectSetup2
 
             // initialize the components (controls) of the window
             this.InitializeComponent();
-           ShowPresentation();
+            ShowPresentation();
 
         }
 
@@ -367,13 +367,13 @@ namespace KinectSetup2
 
                             this.DrawBody(joints, jointPoints, dc, drawPen);
                             int hand; // hand 0 = left , 1 = right
-                            this.DrawHand(body.HandLeftState, jointPoints[JointType.HandLeft], dc,0) ;
-                            this.DrawHand(body.HandRightState, jointPoints[JointType.HandRight], dc,1);
-                          //  PlayBeep();
+                            this.DrawHand(body.HandLeftState, jointPoints[JointType.HandLeft], dc, 0);
+                            this.DrawHand(body.HandRightState, jointPoints[JointType.HandRight], dc, 1);
+                            //  PlayBeep();
                         }
-                       
+
                     }
-                  
+
                     // prevent drawing outside of our render area
                     this.drawingGroup.ClipGeometry = new RectangleGeometry(new Rect(0.0, 0.0, this.displayWidth, this.displayHeight));
                 }
@@ -382,14 +382,14 @@ namespace KinectSetup2
 
         public void retry()
         {
-          
+
         }
 
         private void PlayBeep()
         {
-            if(objSSWs.Count >= 1)
-            objPres.SlideShowWindow.View.Next();
-           // new Thread(() => Console.Beep()).Start();
+            if (objSSWs.Count >= 1)
+                objPres.SlideShowWindow.View.Next();
+            // new Thread(() => Console.Beep()).Start();
         }
 
         /// <summary>
@@ -467,41 +467,42 @@ namespace KinectSetup2
         /// <param name="handState">state of the hand</param>
         /// <param name="handPosition">position of the hand</param>
         /// <param name="drawingContext">drawing context to draw to</param>
-        private void DrawHand(HandState handState, Point handPosition, DrawingContext drawingContext , int hand)
+        private void DrawHand(HandState handState, Point handPosition, DrawingContext drawingContext, int hand)
         {
             switch (handState)
             {
                 case HandState.Closed:
                     drawingContext.DrawEllipse(this.handClosedBrush, null, handPosition, HandSize, HandSize);
-                   
-                       
-                        if (hand == 0 && hand_open_left)
-                        {
+
+
+                    if (hand == 0 && hand_open_left)
+                    {
                         hand_open_left = false;
-                            Button_prev();
-                        }
-                        else if (hand == 1 && hand_open_right)
-                        {
+                        Button_prev();
+                    }
+                    else if (hand == 1 && hand_open_right)
+                    {
                         hand_open_right = false;
-                            Button_Next();
-                        }
-                    
+                        Button_Next();
+                    }
+
                     //Button_Next();
                     //    PlayBeep();
                     break;
                 case HandState.Open:
-                    if(hand == 0)
+                    if (hand == 0)
                     {
                         hand_open_left = true;
-                    }else if(hand == 1)
+                    }
+                    else if (hand == 1)
                     {
                         hand_open_right = true;
                     }
-                   drawingContext.DrawEllipse(this.handOpenBrush, null, handPosition, HandSize, HandSize);
-                    
+                    drawingContext.DrawEllipse(this.handOpenBrush, null, handPosition, HandSize, HandSize);
+
                     break;
 
-               
+
 
                 case HandState.Lasso:
                     drawingContext.DrawEllipse(this.handLassoBrush, null, handPosition, HandSize, HandSize);
@@ -562,7 +563,7 @@ namespace KinectSetup2
             this.StatusText = this._sensor.IsAvailable ? Properties.Resources.RunningStatusText
                                                             : Properties.Resources.SensorNotAvailableStatusText;
         }
-        
+
         private void ShowPresentation()
         {
             String strTemplate, strPic;
@@ -590,8 +591,8 @@ namespace KinectSetup2
             objTextRng.Text = "My Sample Presentation";
             objTextRng.Font.Name = "Comic Sans MS";
             objTextRng.Font.Size = 48;
-           // objSlide.Shapes.AddPicture(strPic, MsoTriState.msoFalse, MsoTriState.msoTrue,
-             //   150, 150, 500, 350);
+            // objSlide.Shapes.AddPicture(strPic, MsoTriState.msoFalse, MsoTriState.msoTrue,
+            //   150, 150, 500, 350);
 
             //Build Slide #2:
             //Add text to the slide title, format the text. Also add a chart to the
@@ -653,7 +654,7 @@ namespace KinectSetup2
             //objPres.Close();
             // objApp.Quit();
         }
-        Boolean next = false , prev = false;
+        Boolean next = false, prev = false;
         private void Button_Next()
         {
             if (objSSWs != null && objSSWs.Count >= 1 && objPres.SlideShowWindow.View != null)
@@ -663,13 +664,13 @@ namespace KinectSetup2
             }
             //if (!next)
             //{
-              //  next = true;
-                //System.Timers.Timer myTimer = new System.Timers.Timer();
-                //myTimer.Elapsed += new ElapsedEventHandler(DisplayTimeEvent);
-                //myTimer.Interval = 5000;
-                //myTimer.Start();
+            //  next = true;
+            //System.Timers.Timer myTimer = new System.Timers.Timer();
+            //myTimer.Elapsed += new ElapsedEventHandler(DisplayTimeEvent);
+            //myTimer.Interval = 5000;
+            //myTimer.Start();
             //}
-              
+
         }
         private void Button_prev()
         {
@@ -690,16 +691,16 @@ namespace KinectSetup2
         private void DisplayTimeEventPrev(Object source, System.Timers.ElapsedEventArgs e)
         {
 
-            
+
         }
 
         private void DisplayTimeEvent(Object source, System.Timers.ElapsedEventArgs e)
         {
 
-            
+
         }
     }
 
 
-      
+
 }
