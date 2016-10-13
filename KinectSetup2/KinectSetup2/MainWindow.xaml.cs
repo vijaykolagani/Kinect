@@ -13,6 +13,7 @@ using Graph = Microsoft.Office.Interop.Graph;
 using PowerPoint1 = Microsoft.Office.Interop.PowerPoint;
 using Microsoft.Office.Core;
 using System.Timers;
+using LightBuzz.Vitruvius;
 
 namespace KinectSetup2
 {
@@ -137,6 +138,8 @@ namespace KinectSetup2
         /// Array for the bodies
         /// </summary>
         private Body[] bodies = null;
+        GestureController _gestureController;
+
 
         public MainWindow()
         {
@@ -225,6 +228,9 @@ namespace KinectSetup2
             // initialize the components (controls) of the window
             this.InitializeComponent();
             ShowPresentation();
+            _gestureController = new GestureController();
+            _gestureController.GestureRecognized += GestureController_GestureRecognized;
+
 
         }
 
@@ -327,6 +333,11 @@ namespace KinectSetup2
                     // those body objects will be re-used.
                     bodyFrame.GetAndRefreshBodyData(this.bodies);
                     dataReceived = true;
+                    Body body = bodyFrame.Bodies().Closest();
+                    if (body != null)
+                    {
+                        _gestureController.Update(body);
+                    }
                 }
             }
 
@@ -471,19 +482,19 @@ namespace KinectSetup2
         {
             switch (handState)
             {
-                case HandState.Closed:
+               /* case HandState.Closed:
                     drawingContext.DrawEllipse(this.handClosedBrush, null, handPosition, HandSize, HandSize);
 
 
                     if (hand == 0 && hand_open_left)
                     {
                         hand_open_left = false;
-                        Button_prev();
+                       // Button_prev();
                     }
                     else if (hand == 1 && hand_open_right)
                     {
                         hand_open_right = false;
-                        Button_Next();
+                       // Button_Next();
                     }
 
                     //Button_Next();
@@ -500,7 +511,7 @@ namespace KinectSetup2
                     }
                     drawingContext.DrawEllipse(this.handOpenBrush, null, handPosition, HandSize, HandSize);
 
-                    break;
+                    break;  */
 
 
 
@@ -698,6 +709,46 @@ namespace KinectSetup2
         {
 
 
+        }
+        void GestureController_GestureRecognized(object sender, GestureEventArgs e)
+        {
+           // gesture.Text = e.GestureType.ToString();
+            var gestureType = e.GestureType;
+            switch (gestureType)
+            {
+                /*case (GestureType.JoinedHands):
+                    gesture.Text = "Joined Hands";
+                    break;
+                case (GestureType.Menu):
+                    break;
+                case (GestureType.SwipeDown):
+                    break;
+                case (GestureType.SwipeUp):
+                    break;
+                case (GestureType.SwipeLeft):
+                    
+                    break;
+                case (GestureType.SwipeRight):
+                    
+                    break;*/
+                case (GestureType.WaveLeft):
+                    gesture.Text = "left";
+                    Button_prev();
+                    break;
+                case (GestureType.WaveRight):
+                    gesture.Text = "right";
+                    Button_Next();
+                    break;
+                case (GestureType.ZoomIn):
+                    break;
+                case (GestureType.ZoomOut):
+                    break;
+                default:
+                    gesture.Text = "null";
+                    break;
+
+                                               
+            }
         }
     }
 
